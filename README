@@ -1,0 +1,35 @@
+Tomasulo Algorithm implementation in a processor using RAT/PREGS simulator by Jonathan Lafiandra
+
+Trace reader by CS4290 TAs
+
+To compile with g++ do:
+    make
+
+To compile with cc do:
+    make C=1
+
+In any case, to clean do:
+    make clean
+
+
+To run after making, type:
+./procsim -r12 -f4 -j1 -k2 -l3 -p32 < traces/file.trace 
+
+with file being either:
+	gcc.100k
+	gobmk.100k
+	hmmer.100k
+	mcf.100k
+
+Extra Parameters:
+./procsim –f F –j J –k K –l L -r ROB -p PREG <trace_file>
+
+The command line parameters are as follows:
+●F – Dispatch rate (instructions per cycle)
+●J – Number of k0 function units
+●K –Number of k1 function units
+●L – Number of k2 function units
+●ROB - Number of ROB entries
+●PREG - Number of PREGs
+●trace_file – Path name to the trace file
+
